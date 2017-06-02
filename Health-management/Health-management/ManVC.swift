@@ -31,8 +31,8 @@ class ManVC: UIViewController {
 //        let ageInt:Int = Int(age1)!
 //        let ageStr:String = String(ageInt)
         
-        let total:Double = ((Double(weiInt)/Double(heiInt*heiInt))*10000.0)
-        let totalStr:String = String(total)
+        let total:Double = (Double(weiInt)/Double(heiInt*heiInt))*10000.0
+        let totalStr:String = NSString(format:"%.2f",total) as String
         BMI.text = totalStr
         
     
