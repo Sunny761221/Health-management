@@ -10,6 +10,34 @@ import UIKit
 
 class ManVC: UIViewController {
 
+    
+    @IBOutlet weak var height: UITextField!
+    @IBOutlet weak var weight: UITextField!
+    @IBOutlet weak var age: UITextField!
+    
+    @IBOutlet weak var BMI: UILabel!
+    @IBOutlet weak var BMR: UILabel!
+
+    @IBAction func Calculation(_ sender: Any) {
+        let hei:String = height.text!
+        let heiInt:Int = Int(hei)!
+//        let heiStr:String = String(heiInt)
+        
+        let wei:String = weight.text!
+        let weiInt:Int = Int(wei)!
+//        let weiStr:String = String(weiInt)
+        
+//        let age1:String = age.text!
+//        let ageInt:Int = Int(age1)!
+//        let ageStr:String = String(ageInt)
+        
+        let total:Double = ((Double(weiInt)/Double(heiInt*heiInt))*10000.0)
+        let totalStr:String = String(total)
+        BMI.text = totalStr
+        
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
