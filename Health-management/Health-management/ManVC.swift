@@ -10,6 +10,12 @@ import UIKit
 
 class ManVC: UIViewController {
 
+    var heiInt:Int = 0
+    var weiInt:Int = 0
+    var ageInt:Int = 0
+    
+    @IBOutlet weak var SegCon: UISegmentedControl!
+    @IBOutlet weak var SportCon: UISegmentedControl!
     
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
@@ -19,32 +25,73 @@ class ManVC: UIViewController {
     @IBOutlet weak var BMRLab: UILabel!
     @IBOutlet weak var StandWeiLab: UILabel!
     
+
     @IBAction func Calculation(_ sender: Any) {
         let hei:String = heightTF.text!
-        let heiInt:Int = Int(hei)!
-//        let heiStr:String = String(heiInt)
+        heiInt = Int(hei)!
         
         let wei:String = weightTF.text!
-        let weiInt:Int = Int(wei)!
-//        let weiStr:String = String(weiInt)
+        weiInt = Int(wei)!
         
         let ageSt:String = ageTF.text!
-        let ageInt:Int = Int(ageSt)!
-//        let ageStr:String = String(ageInt)
+        ageInt = Int(ageSt)!
         
+        BMICal()
+        
+        if SegCon.selectedSegmentIndex == 0 {
+           ManCalBMRAndSW()
+        }else{
+           WomanCalBMRAndSW()
+        }
+
+    }
+    
+    func BMICal(){
         let BMITotal:Double = (Double(weiInt)/Double(heiInt*heiInt))*10000.0
         let BMITotalStr:String = NSString(format:"%.2f",BMITotal) as String
         BMILab.text = BMITotalStr
+    }
+    
+    
+    func ManCalBMRAndSW(){
+        var BMRTotal:Double = 66.0+(13.7*Double(weiInt))+(5.0*Double(heiInt))-(6.8*Double(ageInt))
+        if SportCon.selectedSegmentIndex == 0{
+           BMRTotal *= 1.2
+        }else if SportCon.selectedSegmentIndex == 1{
+           BMRTotal *= 1.375
+        }else if SportCon.selectedSegmentIndex == 2{
+            BMRTotal *= 1.55
+        }else{
+            BMRTotal *= 1.725
+        }
         
-        let BMRTotal:Double = 66.0+(13.7*Double(weiInt))+(5.0*Double(heiInt))-(6.8*Double(ageInt))
         let BMRTotalStr:String = NSString(format:"%.2f",BMRTotal) as String
         BMRLab.text = BMRTotalStr
-        
+    
         let SWTotal:Double = 62.0+(Double(heiInt)-170.0)*0.6
         let SWTotalStr:String = NSString(format:"%.2f",SWTotal) as String
         StandWeiLab.text = SWTotalStr
-        
     }
+    
+    func WomanCalBMRAndSW(){
+        var BMRTotal:Double = 655.0+(9.6*Double(weiInt))+(1.9*Double(heiInt))-(4.7*Double(ageInt))
+        if SportCon.selectedSegmentIndex == 0{
+            BMRTotal *= 1.2
+        }else if SportCon.selectedSegmentIndex == 1{
+            BMRTotal *= 1.375
+        }else if SportCon.selectedSegmentIndex == 2{
+            BMRTotal *= 1.55
+        }else{
+            BMRTotal *= 1.725
+        }
+        let BMRTotalStr:String = NSString(format:"%.2f",BMRTotal) as String
+        BMRLab.text = BMRTotalStr
+    
+        let SWTotal:Double = 52.0+(Double(heiInt)-158.0)*0.5
+        let SWTotalStr:String = NSString(format:"%.2f",SWTotal) as String
+        StandWeiLab.text = SWTotalStr
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
