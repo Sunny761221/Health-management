@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum EnterError:Error {
+    case notHeight
+    case notWeight
+    case notAge
+}
 class ManVC: UIViewController {
 
     var heiInt:Int = 0
@@ -27,22 +32,75 @@ class ManVC: UIViewController {
     
 
     @IBAction func Calculation(_ sender: Any) {
-        let hei:String = heightTF.text!
-        heiInt = Int(hei)!
-        
-        let wei:String = weightTF.text!
-        weiInt = Int(wei)!
-        
-        let ageSt:String = ageTF.text!
-        ageInt = Int(ageSt)!
-        
-        BMICal()
-        
-        if SegCon.selectedSegmentIndex == 0 {
-           ManCalBMRAndSW()
+        if let hei=Int(heightTF.text!){
+          if let wei=Int(weightTF.text!){
+            if let ageSt=Int(ageTF.text!){
+              heiInt=hei
+              weiInt=wei
+              ageInt=ageSt
+              BMICal()
+              if SegCon.selectedSegmentIndex == 0 {
+                ManCalBMRAndSW()
+              }else{
+                WomanCalBMRAndSW()
+              }
+            }else{
+              enterAction()
+              heiInt=0
+            }
+          }else{
+            enterAction()
+            weiInt=0
+          }
         }else{
-           WomanCalBMRAndSW()
+          enterAction()
+          ageInt=0
         }
+        
+        
+//        if let hei=Int(heightTF.text!){
+//            heiInt=hei
+//            BMICal()
+//        }else{
+//            enterAction()
+//            heiInt=0
+//        }
+//        
+//        if let wei=Int(weightTF.text!){
+//           weiInt=wei
+//           BMICal()
+//        }else{
+//           enterAction()
+//           weiInt=0
+//        }
+//        
+//        if let ageSt=Int(ageTF.text!){
+//           ageInt=ageSt
+//           BMICal()
+//        }else{
+//           enterAction()
+//           ageInt=0
+//        }
+        
+
+        
+        
+//        var hei:String = heightTF.text!
+//        heiInt = Int(hei)!
+        
+//        let wei:String = weightTF.text!
+//        weiInt = Int(wei)!
+        
+//        let ageSt:String = ageTF.text!
+//        ageInt = Int(ageSt)!
+        
+//        BMICal()
+        
+//        if SegCon.selectedSegmentIndex == 0 {
+//           ManCalBMRAndSW()
+//        }else{
+//           WomanCalBMRAndSW()
+//        }
 
     }
     
@@ -92,12 +150,91 @@ class ManVC: UIViewController {
         StandWeiLab.text = SWTotalStr
     }
 
+//    func checkEnterData(height:String?, weight:String?, age:String?) throws -> String {
+        
+
+        
+        
+//        guard height != "" else {
+//            throw EnterError.notHeight
+//        }
+//        guard weight != "" else{
+//            throw EnterError.notWeight
+//        }
+//        guard age != "" else{
+//            throw EnterError.notAge
+//        }
+//        return "輸入成功"
+//    }
+    
+    func enterAction(){
+        var alertMeassage = ""
+        var title = "提示訊息"
+        
+        let heightM = heightTF.text
+        let weightM = weightTF.text
+        let ageM = ageTF.text
+        
+        if (heightM?.isEmpty)! && (weightM?.isEmpty)! && (ageM?.isEmpty)!{
+            alertMeassage="身高,體重,年齡輸入有誤"
+        }else if (heightM?.isEmpty)! && (weightM?.isEmpty)!{
+            alertMeassage="身高,體重輸入有誤"
+        }else if (weightM?.isEmpty)! && (ageM?.isEmpty)!{
+            alertMeassage="體重,年齡輸入有誤"
+        }else if (heightM?.isEmpty)! && (ageM?.isEmpty)!{
+            alertMeassage="身高,年齡輸入有誤"
+        }else if (heightM?.isEmpty)!{
+            alertMeassage="身高輸入有誤"
+        }else if (weightM?.isEmpty)!{
+            alertMeassage="體重輸入有誤"
+        }else{
+            alertMeassage="年齡輸入有誤"
+        }
+        
+        let alertController = UIAlertController(title: title, message: alertMeassage, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(
+            title: "確認",
+            style: .default,
+            handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+       
+        
+//        do{
+//           alertMeassage = try checkEnterData(height: heightM, weight: weightM, age: ageM)
+//        }
+//        catch EnterError.notHeight{
+//           alertMeassage="請重新輸入"
+//           title="身高輸入有誤"
+//        }
+//        catch EnterError.notWeight{
+//            alertMeassage="請重新輸入"
+//            title="體重輸入有誤"
+//        }
+//        catch EnterError.notAge{
+//            alertMeassage="請重新輸入"
+//            title="年齡輸入有誤"
+//        }
+//        catch{
+//            alertMeassage="請重新輸入"
+//            title="輸入有誤"
+//        }
+
+        
+        
+
+    }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
-    }
+
+        
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
