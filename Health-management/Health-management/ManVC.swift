@@ -34,6 +34,10 @@ class ManVC: UIViewController {
     @IBAction func Calculation(_ sender: Any) {
         let hei:String = heightTF.text!
 //        heiInt = Int(hei)!
+        let aa = Int(hei)
+        
+        
+        
         
         let wei:String = weightTF.text!
 //        weiInt = Int(wei)!
@@ -44,6 +48,11 @@ class ManVC: UIViewController {
         
         if self.getDataFromUserInput(hei: hei, wei: wei, ageSt: ageSt){
         
+            
+            let BMIStr=Tool.countBMI(height: <#T##Int#>, weight: <#T##Int#>, age: <#T##Int#>)
+            self.BMILab.text=BMIStr
+            
+            
             BMICal()
             
             if SegCon.selectedSegmentIndex == 0 {
@@ -70,7 +79,7 @@ class ManVC: UIViewController {
             msg+="can't get weight! "
         }
         if let localAgeSt = Int(ageSt){
-            self.heiInt=localAgeSt
+            self.ageInt=localAgeSt
         }else{
             msg+="can't get age! "
         }

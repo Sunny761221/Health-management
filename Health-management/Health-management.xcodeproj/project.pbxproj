@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E762381EEAC9FB000FEDFF /* Tool.swift */; };
 		C9D016974639AD6F4DDE23B3 /* Pods_Health_management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */; };
 		E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */; };
 		E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F711EDC5B6F00C7F1FB /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		093D6E18FC545F73BF12F675 /* Pods-Health-management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.debug.xcconfig"; sourceTree = "<group>"; };
+		81E762381EEAC9FB000FEDFF /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D5937E91368405AE0B911 /* Pods-Health-management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.release.xcconfig"; sourceTree = "<group>"; };
 		E9853F6C1EDC5B6F00C7F1FB /* Health-management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health-management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				E9853F761EDC5B6F00C7F1FB /* Assets.xcassets */,
 				E9853F781EDC5B6F00C7F1FB /* LaunchScreen.storyboard */,
 				E9853F7B1EDC5B6F00C7F1FB /* Info.plist */,
+				81E762381EEAC9FB000FEDFF /* Tool.swift */,
 			);
 			path = "Health-management";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */,
 				E994A7541EDEE724003D11F1 /* ManVC.swift in Sources */,
 				E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */,
+				81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */,
 				E994A7561EDEE755003D11F1 /* WomanVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
