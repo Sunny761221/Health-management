@@ -27,9 +27,6 @@ class ManVC: UIViewController {
     @IBOutlet weak var weightTF: UITextField!
     @IBOutlet weak var ageTF: UITextField!
     
-//    lbl
-//    btn
-    
     
     @IBOutlet weak var BMILab: UILabel!
     @IBOutlet weak var BMRLab: UILabel!
@@ -37,7 +34,7 @@ class ManVC: UIViewController {
     
 
     @IBAction func Calculation(_ sender: Any) {
-<<<<<<< HEAD
+
         if let hei=Int(heightTF.text!){
           if let wei=Int(weightTF.text!){
             if let ageSt=Int(ageTF.text!){
@@ -63,83 +60,6 @@ class ManVC: UIViewController {
           ageInt=0
         }
         
-        
-//        if let hei=Int(heightTF.text!){
-//            heiInt=hei
-//            BMICal()
-//        }else{
-//            enterAction()
-//            heiInt=0
-//        }
-//        
-//        if let wei=Int(weightTF.text!){
-//           weiInt=wei
-//           BMICal()
-//        }else{
-//           enterAction()
-//           weiInt=0
-//        }
-//        
-//        if let ageSt=Int(ageTF.text!){
-//           ageInt=ageSt
-//           BMICal()
-//        }else{
-//           enterAction()
-//           ageInt=0
-//        }
-        
-
-        
-        
-//        var hei:String = heightTF.text!
-//        heiInt = Int(hei)!
-        
-//        let wei:String = weightTF.text!
-//        weiInt = Int(wei)!
-        
-//        let ageSt:String = ageTF.text!
-//        ageInt = Int(ageSt)!
-        
-//        BMICal()
-        
-//        if SegCon.selectedSegmentIndex == 0 {
-//           ManCalBMRAndSW()
-//        }else{
-//           WomanCalBMRAndSW()
-//        }
-=======
-        let hei:String = heightTF.text!
-//        heiInt = Int(hei)!
-        let aa = Int(hei)
-        
-        
-        
-        
-        let wei:String = weightTF.text!
-//        weiInt = Int(wei)!
-        
-        let ageSt:String = ageTF.text!
-//        ageInt = Int(ageSt)!
-        
-        
-        if self.getDataFromUserInput(hei: hei, wei: wei, ageSt: ageSt){
-        
-            
-            let BMIStr=Tool.countBMI(height: <#T##Int#>, weight: <#T##Int#>, age: <#T##Int#>)
-            self.BMILab.text=BMIStr
-            
-            
-            BMICal()
-            
-            if SegCon.selectedSegmentIndex == 0 {
-                ManCalBMRAndSW()
-            }else{
-                WomanCalBMRAndSW()
-            }
-        }
-        
-        
->>>>>>> f2e1fed3ead9346a6afe6664a972fd788f59e2ab
 
     }
     
