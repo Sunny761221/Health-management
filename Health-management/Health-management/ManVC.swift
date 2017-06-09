@@ -15,9 +15,10 @@ enum EnterError:Error {
 }
 class ManVC: UIViewController {
 
-    var heiInt:Int = 0
+    var heiInt = 0
     var weiInt:Int = 0
     var ageInt:Int = 0
+    
     
     @IBOutlet weak var SegCon: UISegmentedControl!
     @IBOutlet weak var SportCon: UISegmentedControl!
@@ -26,12 +27,17 @@ class ManVC: UIViewController {
     @IBOutlet weak var weightTF: UITextField!
     @IBOutlet weak var ageTF: UITextField!
     
+//    lbl
+//    btn
+    
+    
     @IBOutlet weak var BMILab: UILabel!
     @IBOutlet weak var BMRLab: UILabel!
     @IBOutlet weak var StandWeiLab: UILabel!
     
 
     @IBAction func Calculation(_ sender: Any) {
+<<<<<<< HEAD
         if let hei=Int(heightTF.text!){
           if let wei=Int(weightTF.text!){
             if let ageSt=Int(ageTF.text!){
@@ -101,8 +107,71 @@ class ManVC: UIViewController {
 //        }else{
 //           WomanCalBMRAndSW()
 //        }
+=======
+        let hei:String = heightTF.text!
+//        heiInt = Int(hei)!
+        let aa = Int(hei)
+        
+        
+        
+        
+        let wei:String = weightTF.text!
+//        weiInt = Int(wei)!
+        
+        let ageSt:String = ageTF.text!
+//        ageInt = Int(ageSt)!
+        
+        
+        if self.getDataFromUserInput(hei: hei, wei: wei, ageSt: ageSt){
+        
+            
+            let BMIStr=Tool.countBMI(height: <#T##Int#>, weight: <#T##Int#>, age: <#T##Int#>)
+            self.BMILab.text=BMIStr
+            
+            
+            BMICal()
+            
+            if SegCon.selectedSegmentIndex == 0 {
+                ManCalBMRAndSW()
+            }else{
+                WomanCalBMRAndSW()
+            }
+        }
+        
+        
+>>>>>>> f2e1fed3ead9346a6afe6664a972fd788f59e2ab
 
     }
+    
+    func getDataFromUserInput(hei:String,wei:String,ageSt:String)->Bool{
+        var msg="";
+        if let localHeight = Int(hei){
+            self.heiInt=localHeight
+        }else{
+            msg+="can't get height! "
+        }
+        if let localWei = Int(wei){
+            self.weiInt=localWei
+        }else{
+            msg+="can't get weight! "
+        }
+        if let localAgeSt = Int(ageSt){
+            self.ageInt=localAgeSt
+        }else{
+            msg+="can't get age! "
+        }
+        print(msg)
+        
+        if msg==""{
+            return true
+        }else{
+            return false
+        }
+        
+    }
+    
+    
+    
     
     func BMICal(){
         let BMITotal:Double = (Double(weiInt)/Double(heiInt*heiInt))*10000.0
