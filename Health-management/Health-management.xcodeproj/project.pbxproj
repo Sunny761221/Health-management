@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E762381EEAC9FB000FEDFF /* Tool.swift */; };
 		C9D016974639AD6F4DDE23B3 /* Pods_Health_management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */; };
+		E960C37A1EEECB5C00C62DA1 /* loseWeight.png in Resources */ = {isa = PBXBuildFile; fileRef = E960C3791EEECB5C00C62DA1 /* loseWeight.png */; };
 		E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */; };
 		E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F711EDC5B6F00C7F1FB /* ViewController.swift */; };
 		E9853F751EDC5B6F00C7F1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9853F731EDC5B6F00C7F1FB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		81E762381EEAC9FB000FEDFF /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D5937E91368405AE0B911 /* Pods-Health-management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.release.xcconfig"; sourceTree = "<group>"; };
+		E960C3791EEECB5C00C62DA1 /* loseWeight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loseWeight.png; sourceTree = "<group>"; };
 		E9853F6C1EDC5B6F00C7F1FB /* Health-management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health-management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9853F711EDC5B6F00C7F1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		E9853F6E1EDC5B6F00C7F1FB /* Health-management */ = {
 			isa = PBXGroup;
 			children = (
+				E960C3791EEECB5C00C62DA1 /* loseWeight.png */,
 				E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */,
 				E9853F711EDC5B6F00C7F1FB /* ViewController.swift */,
 				E994A7531EDEE724003D11F1 /* ManVC.swift */,
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E960C37A1EEECB5C00C62DA1 /* loseWeight.png in Resources */,
 				E9853F7A1EDC5B6F00C7F1FB /* LaunchScreen.storyboard in Resources */,
 				E9853F771EDC5B6F00C7F1FB /* Assets.xcassets in Resources */,
 				E9853F751EDC5B6F00C7F1FB /* Main.storyboard in Resources */,
