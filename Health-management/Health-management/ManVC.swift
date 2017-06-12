@@ -8,20 +8,15 @@
 
 import UIKit
 
-enum EnterError:Error {
-    case notHeight
-    case notWeight
-    case notAge
-}
 class ManVC: UIViewController {
 
-    var heiInt = 0
+    var heiInt:Int = 0
     var weiInt:Int = 0
     var ageInt:Int = 0
     
     
-    @IBOutlet weak var SegCon: UISegmentedControl!
-    @IBOutlet weak var SportCon: UISegmentedControl!
+    @IBOutlet weak var segSex: UISegmentedControl!
+    @IBOutlet weak var segSport: UISegmentedControl!
     
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
@@ -41,11 +36,16 @@ class ManVC: UIViewController {
               heiInt=hei
               weiInt=wei
               ageInt=ageSt
-              BMICal()
-              if SegCon.selectedSegmentIndex == 0 {
-                ManCalBMRAndSW()
+              let BMITotalSt=Tool.countBMI(height: hei, weight: wei, age: ageSt)
+                BMILab.text=BMITotalSt
+              if segSex.selectedSegmentIndex == 0 {
+                let SWManCal=Tool.ManCalSW(height: hei)
+                StandWeiLab.text=SWManCal
+                ManCalBMR()
               }else{
-                WomanCalBMRAndSW()
+                let SWWomanCal=Tool.WomanCalSW(height: hei)
+                StandWeiLab.text=SWWomanCal
+                WomanCalBMR()
               }
             }else{
               enterAction()
@@ -63,7 +63,7 @@ class ManVC: UIViewController {
 
     }
     
-    func getDataFromUserInput(hei:String,wei:String,ageSt:String)->Bool{
+/*    func getDataFromUserInput(hei:String,wei:String,ageSt:String)->Bool{
         var msg="";
         if let localHeight = Int(hei){
             self.heiInt=localHeight
@@ -89,24 +89,16 @@ class ManVC: UIViewController {
         }
         
     }
-    
-    
-    
-    
-    func BMICal(){
-        let BMITotal:Double = (Double(weiInt)/Double(heiInt*heiInt))*10000.0
-        let BMITotalStr:String = NSString(format:"%.2f",BMITotal) as String
-        BMILab.text = BMITotalStr
-    }
-    
-    
-    func ManCalBMRAndSW(){
+*/
+    func ManCalBMR(){
+
         var BMRTotal:Double = 66.0+(13.7*Double(weiInt))+(5.0*Double(heiInt))-(6.8*Double(ageInt))
-        if SportCon.selectedSegmentIndex == 0{
+
+        if segSport.selectedSegmentIndex == 0{
            BMRTotal *= 1.2
-        }else if SportCon.selectedSegmentIndex == 1{
+        }else if segSport.selectedSegmentIndex == 1{
            BMRTotal *= 1.375
-        }else if SportCon.selectedSegmentIndex == 2{
+        }else if segSport.selectedSegmentIndex == 2{
             BMRTotal *= 1.55
         }else{
             BMRTotal *= 1.725
@@ -114,51 +106,26 @@ class ManVC: UIViewController {
         
         let BMRTotalStr:String = NSString(format:"%.2f",BMRTotal) as String
         BMRLab.text = BMRTotalStr
+}
     
-        let SWTotal:Double = 62.0+(Double(heiInt)-170.0)*0.6
-        let SWTotalStr:String = NSString(format:"%.2f",SWTotal) as String
-        StandWeiLab.text = SWTotalStr
-    }
-    
-    func WomanCalBMRAndSW(){
+    func WomanCalBMR(){
         var BMRTotal:Double = 655.0+(9.6*Double(weiInt))+(1.9*Double(heiInt))-(4.7*Double(ageInt))
-        if SportCon.selectedSegmentIndex == 0{
+        if segSport.selectedSegmentIndex == 0{
             BMRTotal *= 1.2
-        }else if SportCon.selectedSegmentIndex == 1{
+        }else if segSport.selectedSegmentIndex == 1{
             BMRTotal *= 1.375
-        }else if SportCon.selectedSegmentIndex == 2{
+        }else if segSport.selectedSegmentIndex == 2{
             BMRTotal *= 1.55
         }else{
             BMRTotal *= 1.725
         }
-        let BMRTotalStr:String = NSString(format:"%.2f",BMRTotal) as String
-        BMRLab.text = BMRTotalStr
-    
-        let SWTotal:Double = 52.0+(Double(heiInt)-158.0)*0.5
-        let SWTotalStr:String = NSString(format:"%.2f",SWTotal) as String
-        StandWeiLab.text = SWTotalStr
-    }
+        let BMRTotalSt:String = NSString(format:"%.2f",BMRTotal) as String
+        BMRLab.text = BMRTotalSt
+}
 
-//    func checkEnterData(height:String?, weight:String?, age:String?) throws -> String {
-        
-
-        
-        
-//        guard height != "" else {
-//            throw EnterError.notHeight
-//        }
-//        guard weight != "" else{
-//            throw EnterError.notWeight
-//        }
-//        guard age != "" else{
-//            throw EnterError.notAge
-//        }
-//        return "輸入成功"
-//    }
-    
     func enterAction(){
         var alertMeassage = ""
-        var title = "提示訊息"
+        let title = "提示訊息"
         
         let heightM = heightTF.text
         let weightM = weightTF.text
@@ -187,33 +154,7 @@ class ManVC: UIViewController {
             handler: nil)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
-        
-       
-        
-//        do{
-//           alertMeassage = try checkEnterData(height: heightM, weight: weightM, age: ageM)
-//        }
-//        catch EnterError.notHeight{
-//           alertMeassage="請重新輸入"
-//           title="身高輸入有誤"
-//        }
-//        catch EnterError.notWeight{
-//            alertMeassage="請重新輸入"
-//            title="體重輸入有誤"
-//        }
-//        catch EnterError.notAge{
-//            alertMeassage="請重新輸入"
-//            title="年齡輸入有誤"
-//        }
-//        catch{
-//            alertMeassage="請重新輸入"
-//            title="輸入有誤"
-//        }
-
-        
-        
-
-    }
+}
     
 
     

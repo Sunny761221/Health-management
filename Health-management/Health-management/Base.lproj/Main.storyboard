@@ -193,11 +193,11 @@
                     <connections>
                         <outlet property="BMILab" destination="smm-aX-LpN" id="oND-YA-Uhq"/>
                         <outlet property="BMRLab" destination="wDc-kF-OnX" id="Bod-Kn-gRU"/>
-                        <outlet property="SegCon" destination="nZj-XB-gNl" id="bx9-qN-Lmp"/>
-                        <outlet property="SportCon" destination="g0e-zi-cfZ" id="GFt-0l-lkw"/>
                         <outlet property="StandWeiLab" destination="TEg-8k-LwD" id="Xb6-D8-SW6"/>
                         <outlet property="ageTF" destination="3Sq-4z-dQa" id="UjS-DI-GBM"/>
                         <outlet property="heightTF" destination="ZjY-PL-qoP" id="xoh-4u-Ww1"/>
+                        <outlet property="segSex" destination="nZj-XB-gNl" id="eUC-BZ-pww"/>
+                        <outlet property="segSport" destination="g0e-zi-cfZ" id="h9j-Gq-bDW"/>
                         <outlet property="weightTF" destination="ldm-lx-kvq" id="rjb-FR-BI0"/>
                     </connections>
                 </viewController>
