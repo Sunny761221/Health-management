@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManVC: UIViewController {
+class ManVC: UIViewController,UITextFieldDelegate {
 
     var heiInt:Int = 0
     var weiInt:Int = 0
@@ -63,33 +63,7 @@ class ManVC: UIViewController {
 
     }
     
-/*    func getDataFromUserInput(hei:String,wei:String,ageSt:String)->Bool{
-        var msg="";
-        if let localHeight = Int(hei){
-            self.heiInt=localHeight
-        }else{
-            msg+="can't get height! "
-        }
-        if let localWei = Int(wei){
-            self.weiInt=localWei
-        }else{
-            msg+="can't get weight! "
-        }
-        if let localAgeSt = Int(ageSt){
-            self.ageInt=localAgeSt
-        }else{
-            msg+="can't get age! "
-        }
-        print(msg)
-        
-        if msg==""{
-            return true
-        }else{
-            return false
-        }
-        
-    }
-*/
+
     func ManCalBMR(){
 
         var BMRTotal:Double = 66.0+(13.7*Double(weiInt))+(5.0*Double(heiInt))-(6.8*Double(ageInt))
@@ -161,7 +135,9 @@ class ManVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        // Do any additional setup after loading the view.
+        self.heightTF.delegate=self
+        self.weightTF.delegate=self
+        self.ageTF.delegate=self
 
         
             }
@@ -171,15 +147,7 @@ class ManVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
 }
