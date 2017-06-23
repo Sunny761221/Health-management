@@ -21,12 +21,7 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
         numText.text!=self.data
 
         
-    }
-    
-    @IBOutlet weak var numText: UITextField!
-    @IBAction func backBtn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-         // nameData write to file
+        // nameData write to file
         
         
         let fm = FileManager.default
@@ -45,6 +40,32 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
         }catch{
             print(" error ")
         }
+
+        
+    }
+    
+    @IBOutlet weak var numText: UITextField!
+    @IBAction func backBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+//         // nameData write to file
+//        
+//        
+//        let fm = FileManager.default
+//        let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+//        let fileName = String(self.preIndex)+"_.txt"
+//        
+//        let myurl = docsurl.appendingPathComponent(fileName)
+//        print("myurl = \(myurl)")
+//        var names=""
+//        for name in datas{
+//            names = names + "," + name
+//        }
+//        do {
+//            
+//            try names.write(to: myurl, atomically: false, encoding: .utf8)
+//        }catch{
+//            print(" error ")
+//        }
 
     }
     
