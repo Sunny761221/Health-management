@@ -10,13 +10,14 @@
 		81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E762381EEAC9FB000FEDFF /* Tool.swift */; };
 		C9D016974639AD6F4DDE23B3 /* Pods_Health_management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */; };
 		E960C37A1EEECB5C00C62DA1 /* loseWeight.png in Resources */ = {isa = PBXBuildFile; fileRef = E960C3791EEECB5C00C62DA1 /* loseWeight.png */; };
+		E96997DE1EFD2F9C00B52549 /* SportscheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96997DD1EFD2F9C00B52549 /* SportscheduleVC.swift */; };
+		E96997E01EFD30D300B52549 /* inVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96997DF1EFD30D300B52549 /* inVC.swift */; };
 		E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */; };
 		E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9853F711EDC5B6F00C7F1FB /* ViewController.swift */; };
 		E9853F751EDC5B6F00C7F1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9853F731EDC5B6F00C7F1FB /* Main.storyboard */; };
 		E9853F771EDC5B6F00C7F1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9853F761EDC5B6F00C7F1FB /* Assets.xcassets */; };
 		E9853F7A1EDC5B6F00C7F1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9853F781EDC5B6F00C7F1FB /* LaunchScreen.storyboard */; };
 		E994A7541EDEE724003D11F1 /* ManVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994A7531EDEE724003D11F1 /* ManVC.swift */; };
-		E994A7561EDEE755003D11F1 /* WomanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994A7551EDEE755003D11F1 /* WomanVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D5937E91368405AE0B911 /* Pods-Health-management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.release.xcconfig"; sourceTree = "<group>"; };
 		E960C3791EEECB5C00C62DA1 /* loseWeight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loseWeight.png; sourceTree = "<group>"; };
+		E96997DD1EFD2F9C00B52549 /* SportscheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportscheduleVC.swift; sourceTree = "<group>"; };
+		E96997DF1EFD30D300B52549 /* inVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inVC.swift; sourceTree = "<group>"; };
 		E9853F6C1EDC5B6F00C7F1FB /* Health-management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health-management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9853F711EDC5B6F00C7F1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +36,6 @@
 		E9853F791EDC5B6F00C7F1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9853F7B1EDC5B6F00C7F1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E994A7531EDEE724003D11F1 /* ManVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManVC.swift; sourceTree = "<group>"; };
-		E994A7551EDEE755003D11F1 /* WomanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WomanVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				E960C3791EEECB5C00C62DA1 /* loseWeight.png */,
+				E96997DF1EFD30D300B52549 /* inVC.swift */,
 				E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */,
 				E9853F711EDC5B6F00C7F1FB /* ViewController.swift */,
+				E96997DD1EFD2F9C00B52549 /* SportscheduleVC.swift */,
 				E994A7531EDEE724003D11F1 /* ManVC.swift */,
 				E9853F731EDC5B6F00C7F1FB /* Main.storyboard */,
-				E994A7551EDEE755003D11F1 /* WomanVC.swift */,
 				E9853F761EDC5B6F00C7F1FB /* Assets.xcassets */,
 				E9853F781EDC5B6F00C7F1FB /* LaunchScreen.storyboard */,
 				E9853F7B1EDC5B6F00C7F1FB /* Info.plist */,
@@ -225,10 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */,
+				E96997E01EFD30D300B52549 /* inVC.swift in Sources */,
 				E994A7541EDEE724003D11F1 /* ManVC.swift in Sources */,
 				E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */,
+				E96997DE1EFD2F9C00B52549 /* SportscheduleVC.swift in Sources */,
 				81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */,
-				E994A7561EDEE755003D11F1 /* WomanVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
