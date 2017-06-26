@@ -47,26 +47,6 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
     @IBOutlet weak var numText: UITextField!
     @IBAction func backBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-//         // nameData write to file
-//        
-//        
-//        let fm = FileManager.default
-//        let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-//        let fileName = String(self.preIndex)+"_.txt"
-//        
-//        let myurl = docsurl.appendingPathComponent(fileName)
-//        print("myurl = \(myurl)")
-//        var names=""
-//        for name in datas{
-//            names = names + "," + name
-//        }
-//        do {
-//            
-//            try names.write(to: myurl, atomically: false, encoding: .utf8)
-//        }catch{
-//            print(" error ")
-//        }
-
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,8 +64,14 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
         label1.text=self.datas[indexPath.row]
         return cell
     }
-
-
+//消除表格
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+           datas.remove(at: indexPath.row)
+           tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
