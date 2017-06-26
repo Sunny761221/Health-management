@@ -69,8 +69,8 @@ class SportscheduleVC: UIViewController,UITableViewDataSource,UITableViewDelegat
         
         self.navigationController?.pushViewController(vc, animated: true)
         
-        
-        
+    
     }
-
+  
+    
 }
