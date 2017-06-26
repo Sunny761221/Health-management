@@ -80,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				E960C3791EEECB5C00C62DA1 /* loseWeight.png */,
-				E96997DF1EFD30D300B52549 /* inVC.swift */,
 				E9853F6F1EDC5B6F00C7F1FB /* AppDelegate.swift */,
 				E9853F711EDC5B6F00C7F1FB /* ViewController.swift */,
 				E96997DD1EFD2F9C00B52549 /* SportscheduleVC.swift */,
@@ -88,6 +87,7 @@
 				E9853F731EDC5B6F00C7F1FB /* Main.storyboard */,
 				E9853F761EDC5B6F00C7F1FB /* Assets.xcassets */,
 				E9853F781EDC5B6F00C7F1FB /* LaunchScreen.storyboard */,
+				E96997DF1EFD30D300B52549 /* inVC.swift */,
 				E9853F7B1EDC5B6F00C7F1FB /* Info.plist */,
 				81E762381EEAC9FB000FEDFF /* Tool.swift */,
 			);
