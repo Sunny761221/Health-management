@@ -10,6 +10,9 @@ import UIKit
 
 class caloireVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    var nav : UINavigationBar!
+    var navItem : UINavigationItem!
+    
     var myTableView: UITableView!
     
     var Sports: [String] = ["走路","爬樓梯","跑步",
@@ -83,6 +86,8 @@ class caloireVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         "拳擊消耗熱量METs11.4",
         "划船比賽消耗熱量METs12.4"
     ]
+    
+    
     
     
     
@@ -183,8 +188,7 @@ class caloireVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         super.viewDidLoad()
         
         var rect=UIScreen.main.bounds
-        
-        rect=CGRect(x: 0, y: 20, width: rect.size.width, height: rect.size.height)
+        rect.origin.y=65
         
         myTableView=UITableView(frame: rect, style: UITableViewStyle.plain)
         myTableView.dataSource=self
@@ -192,6 +196,28 @@ class caloireVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         myTableView.sectionIndexBackgroundColor = UIColor(red: 55/255, green: 186/255, blue: 89/255, alpha: 1)
         myTableView.sectionIndexColor = UIColor.black
         self.view.addSubview(myTableView)
+        
+        
+        rect.size.height -= 64
+        
+        rect.origin.y += 64
+        
+        print(rect)
+        
+        var spaceView: UIView = UIView(frame: CGRect(x:0, y:0 ,width:320, height:20))
+        
+        spaceView.backgroundColor = UIColor(red: 0.973, green: 0.973, blue: 0.973, alpha: 1)
+        
+        self.view.addSubview(spaceView)
+        
+        
+        nav = UINavigationBar(frame: CGRect(x:0, y:20, width:370, height:44))
+        
+        self.view.addSubview(nav)
+        
+        navItem = UINavigationItem(title: "METs(能量消耗)＝(km/hr)×體重(kg)")
+        
+        nav.pushItem(navItem, animated: true)
         
         // Do any additional setup after loading the view.
     }
