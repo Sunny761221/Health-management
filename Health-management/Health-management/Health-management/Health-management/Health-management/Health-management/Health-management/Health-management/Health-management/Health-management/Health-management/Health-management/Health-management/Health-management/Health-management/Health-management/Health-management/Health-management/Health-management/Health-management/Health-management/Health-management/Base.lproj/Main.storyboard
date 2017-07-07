@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
-=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
->>>>>>> f9a8c6b119ec28b5220c0dfccd049e58fad6c7bf
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -215,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t57-a8-p0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2278" y="578"/>
+            <point key="canvasLocation" x="2199.1999999999998" y="577.9610194902549"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Kg1-Rm-Zy2">
@@ -392,24 +388,40 @@
             </objects>
             <point key="canvasLocation" x="-578" y="-649"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="2e6-lR-WV2">
+        <!--View Controller-->
+        <scene sceneID="56f-L1-4fO">
             <objects>
-                <viewController storyboardIdentifier="caloireVC" id="1VV-cr-8cy" customClass="caloireVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mTH-jL-OE0" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="plu-ca-Hep"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Es-vP-g2r"/>
+                        <viewControllerLayoutGuide type="top" id="Hpv-ab-9fs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fK8-Ob-TNE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jza-Ue-tvL">
+                    <view key="view" contentMode="scaleToFill" id="Umu-Qu-n5L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y1W-X9-nep">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fZf-ig-ggY">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZf-ig-ggY" id="SP8-ey-gKv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="G5K-Le-P4T"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tf-Ni-ywc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gB-rZ-vIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="1010"/>
+            <point key="canvasLocation" x="-578.39999999999998" y="219.94002998500753"/>
         </scene>
         <!--卡洛里計算-->
         <scene sceneID="FRD-1l-90b">
@@ -423,7 +435,6 @@
                     <connections>
                         <segue destination="h0W-op-GSU" kind="relationship" relationship="viewControllers" id="1JL-qp-VCK"/>
                         <segue destination="dPP-dX-feb" kind="relationship" relationship="viewControllers" id="TqV-IY-N49"/>
-                        <segue destination="1VV-cr-8cy" kind="relationship" relationship="viewControllers" id="LJR-rh-5ev"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecY-Ng-lSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
