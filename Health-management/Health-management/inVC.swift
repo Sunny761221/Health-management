@@ -10,37 +10,46 @@ import UIKit
 
 class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
     
-    var preIndex:Int=0
+//    var index:Int=0
+    var preIndex:Int=1
     var datas:Array<String>=[]
     var data:String=""
     @IBOutlet weak var numView: UITableView!
     
     @IBAction func storeBtn(_ sender: UIButton) {
+
+        // nameData write to file
+        let fm = FileManager.default
+        let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        let folderName = ""
+        let fileName = String(self.preIndex)+"_.txt"
+        
+        var myurl = docsurl.appendingPathComponent(folderName)
+        print("myurl = \(myurl)")
+         myurl.appendPathComponent(fileName)
+//        print("myUrl = \(myUrl)")
+        
+        var names=numText.text
+        if names==""{
+          enterAction()
+          return
+        }else{
+          for name in datas{
+              names = names! + "," + name
+          }
+        }
+    
+    do {
+
+            try names?.write(to: myurl, atomically: false, encoding: .utf8)
+            print("OK1")
+       }catch{
+            print(" error1 ")
+        }
+        
         self.datas.append(numText.text!)
         self.numView.reloadData()
         numText.text!=self.data
-
-        
-        // nameData write to file
-        
-        
-        let fm = FileManager.default
-        let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let fileName = String(self.preIndex)+"_.txt"
-        
-        let myurl = docsurl.appendingPathComponent(fileName)
-        print("myurl = \(myurl)")
-        var names=""
-        for name in datas{
-            names = names + "," + name
-        }
-        do {
-            
-            try names.write(to: myurl, atomically: false, encoding: .utf8)
-        }catch{
-            print(" error ")
-        }
-
         
     }
     
@@ -72,6 +81,25 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
         }
     }
     
+    func enterAction(){
+        var alertMeassage = ""
+        let title = "提示訊息"
+        
+        let sport = numText.text
+        
+        
+        if sport == ""{
+            alertMeassage="不能輸入空白,請輸入名稱"
+        }
+        
+        let alertController = UIAlertController(title: title, message: alertMeassage, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(
+            title: "確認",
+            style: .default,
+            handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,39 +129,29 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        // read file to nameData
-        
-        // tableview reload data
-        
-        
-        print(self.preIndex)
-        
+    // read file to nameData
+    // tableview reload data
+//        print(self.preIndex)
+        loadData()
+    }
+    
+    func loadData(){
         let fm = FileManager.default
         let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         let fileName = String(self.preIndex)+"_.txt"
         
         let myurl = docsurl.appendingPathComponent(fileName)
         print("myurl = \(myurl)")
-        
-        
-        
+
         do {
-            let names=try String(contentsOf: myurl)
-            
-            datas = names.components(separatedBy: ",")
-            
-            //            try nameData=String(contentsOf: myurl)
-            //                .write(to: myurl, atomically: false, encoding: .utf8)
+            let Names=try String(contentsOf: myurl)
+            datas = Names.components(separatedBy: ",")
+            print("OK2")
         }catch{
-            datas=[]
-            print(" error ")
+//            datas=[]
+            print(" error2 ")
         }
 
-        
     }
-    
-    
-    
-    
     
 }
