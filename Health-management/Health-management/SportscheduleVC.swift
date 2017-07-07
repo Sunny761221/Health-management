@@ -158,7 +158,6 @@ class SportscheduleVC: UIViewController,UITableViewDataSource,UITableViewDelegat
             datas = Names.components(separatedBy: ",")
             print("Yes3")
         }catch{
-            //            datas=[]
             print("NO3")
         }
         
