@@ -189,6 +189,7 @@ class caloireVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         var rect=UIScreen.main.bounds
         rect.origin.y=65
+        rect.size=CGSize(width: rect.size.width, height: rect.size.height-115)
         
         myTableView=UITableView(frame: rect, style: UITableViewStyle.plain)
         myTableView.dataSource=self
