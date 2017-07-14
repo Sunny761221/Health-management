@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,12 +24,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="體重管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-4u-PGR">
-                                <rect key="frame" x="96" y="3" width="183" height="49"/>
+                                <rect key="frame" x="96" y="20" width="183" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgL-Ui-Kk4">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgL-Ui-Kk4">
                                 <rect key="frame" x="105" y="567" width="165" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="歡迎使用">
@@ -51,6 +51,7 @@
                             <constraint firstItem="mgL-Ui-Kk4" firstAttribute="top" secondItem="by6-Zd-17b" secondAttribute="bottom" constant="8" id="7IQ-sl-Syj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1v-4u-PGR" secondAttribute="trailing" constant="80" id="DbK-9j-6kg"/>
                             <constraint firstItem="mgL-Ui-Kk4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="89" id="PVM-9H-tg7"/>
+                            <constraint firstItem="p1v-4u-PGR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="QsU-gg-drU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mgL-Ui-Kk4" secondAttribute="trailing" constant="89" id="lmY-zN-2ZI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mgL-Ui-Kk4" secondAttribute="bottom" constant="39" id="oME-zz-AvX"/>
                             <constraint firstItem="by6-Zd-17b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qk7-TV-JLF"/>
@@ -510,7 +511,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qzc-8o-yla" id="Qcy-or-y2y">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="53.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
