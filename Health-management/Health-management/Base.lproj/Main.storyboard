@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vev-cu-UcI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="300" y="-649.02548725637189"/>
         </scene>
-        <!--Item 2-->
+        <!--建立計畫-->
         <scene sceneID="gny-Nc-klh">
             <objects>
                 <viewController id="dPP-dX-feb" customClass="SportscheduleVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uBN-sD-N8i"/>
+                    <tabBarItem key="tabBarItem" title="建立計畫" image="計畫" id="uBN-sD-N8i"/>
                     <connections>
                         <outlet property="spciesView" destination="rrQ-ZZ-sj0" id="yw7-Bu-kBA"/>
                         <outlet property="sporttext" destination="8Sz-Ox-fiZ" id="Tkq-hA-eGU"/>
@@ -213,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="2278" y="578"/>
         </scene>
-        <!--Item 1-->
+        <!--計算-->
         <scene sceneID="Kg1-Rm-Zy2">
             <objects>
                 <viewController id="h0W-op-GSU" customClass="ManVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,7 +356,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Zu7-ba-XU4"/>
+                    <tabBarItem key="tabBarItem" title="計算" image="計算機" id="Zu7-ba-XU4"/>
                     <connections>
                         <outlet property="BMILab" destination="smm-aX-LpN" id="oND-YA-Uhq"/>
                         <outlet property="BMRLab" destination="wDc-kF-OnX" id="Bod-Kn-gRU"/>
@@ -388,29 +388,10 @@
             </objects>
             <point key="canvasLocation" x="-578" y="-649"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="2e6-lR-WV2">
-            <objects>
-                <viewController storyboardIdentifier="caloireVC" id="1VV-cr-8cy" customClass="caloireVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="plu-ca-Hep"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Es-vP-g2r"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jza-Ue-tvL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="G5K-Le-P4T"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tf-Ni-ywc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="300" y="1010"/>
-        </scene>
         <!--卡洛里計算-->
         <scene sceneID="FRD-1l-90b">
             <objects>
-                <tabBarController title="卡洛里計算" id="SKc-Fw-Jin" sceneMemberID="viewController">
+                <tabBarController title="卡洛里計算" id="SKc-Fw-Jin" customClass="TabBarVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RFT-rL-B8m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -419,15 +400,122 @@
                     <connections>
                         <segue destination="h0W-op-GSU" kind="relationship" relationship="viewControllers" id="1JL-qp-VCK"/>
                         <segue destination="dPP-dX-feb" kind="relationship" relationship="viewControllers" id="TqV-IY-N49"/>
-                        <segue destination="1VV-cr-8cy" kind="relationship" relationship="viewControllers" id="LJR-rh-5ev"/>
+                        <segue destination="iFQ-vH-bIG" kind="relationship" relationship="viewControllers" id="edr-Ue-Nbf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecY-Ng-lSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="300" y="228"/>
         </scene>
+        <!--CaloireVC-->
+        <scene sceneID="d7a-zq-IRN">
+            <objects>
+                <tableViewController id="mtT-h2-3Cv" customClass="CaloireVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="zKP-of-a9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="qzc-8o-yla">
+                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qzc-8o-yla" id="Qcy-or-y2y">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="53.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rwA-e3-7ja" kind="show" identifier="showRecord" id="mxc-iZ-Km1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mtT-h2-3Cv" id="c3T-xY-lZ5"/>
+                            <outlet property="delegate" destination="mtT-h2-3Cv" id="4Wz-vP-Hg1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Qzx-RS-PFG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wM8-qq-PVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239.2" y="1278.7106446776613"/>
+        </scene>
+        <!--TextVC-->
+        <scene sceneID="hLN-3l-Pir">
+            <objects>
+                <viewController id="rwA-e3-7ja" customClass="TextVC" customModule="Health_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8TA-fr-ZAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Cn-OD-Em0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4FA-Yg-A9i" customClass="t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="項目：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-3W-DgL">
+                                <rect key="frame" x="16" y="72" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="說明：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-7A-ZZK">
+                                <rect key="frame" x="16" y="116" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-dk-6aN">
+                                <rect key="frame" x="75" y="72" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-tO-904">
+                                <rect key="frame" x="16" y="134" width="341" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailTextView" destination="bhB-tO-904" id="642-Rh-Klp"/>
+                        <outlet property="productTextField" destination="VOz-dk-6aN" id="w88-Ms-YLK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiq-YZ-ngs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8" y="1278.7106446776613"/>
+        </scene>
+        <!--運動項目-->
+        <scene sceneID="356-7Z-fzu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iFQ-vH-bIG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="運動項目" image="統計" id="W3P-i5-vfg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tjy-LL-YWz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mtT-h2-3Cv" kind="relationship" relationship="rootViewController" id="5fF-sP-EvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3X-tA-ACW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="1278.7106446776613"/>
+        </scene>
     </scenes>
     <resources>
         <image name="loseWeight.png" width="225" height="225"/>
+        <image name="統計" width="25" height="25"/>
+        <image name="計畫" width="25" height="25"/>
+        <image name="計算機" width="25" height="25"/>
     </resources>
 </document>

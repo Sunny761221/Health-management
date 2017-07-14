@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47C69A8E1F067B9500D892FB /* caloireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C69A8D1F067B9500D892FB /* caloireVC.swift */; };
+		470EE3851F18DB080074F280 /* CaloireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EE3841F18DB080074F280 /* CaloireVC.swift */; };
+		470EE3891F18DF330074F280 /* TextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470EE3881F18DF330074F280 /* TextVC.swift */; };
+		47C7354A1F12BF070029B1F5 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C735491F12BF070029B1F5 /* TabBarVC.swift */; };
 		81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E762381EEAC9FB000FEDFF /* Tool.swift */; };
 		C9D016974639AD6F4DDE23B3 /* Pods_Health_management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */; };
 		E960C37A1EEECB5C00C62DA1 /* loseWeight.png in Resources */ = {isa = PBXBuildFile; fileRef = E960C3791EEECB5C00C62DA1 /* loseWeight.png */; };
@@ -23,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		093D6E18FC545F73BF12F675 /* Pods-Health-management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.debug.xcconfig"; sourceTree = "<group>"; };
-		47C69A8D1F067B9500D892FB /* caloireVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = caloireVC.swift; sourceTree = "<group>"; };
+		470EE3841F18DB080074F280 /* CaloireVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaloireVC.swift; sourceTree = "<group>"; };
+		470EE3881F18DF330074F280 /* TextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextVC.swift; sourceTree = "<group>"; };
+		47C735491F12BF070029B1F5 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		81E762381EEAC9FB000FEDFF /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		D5CC9A933EA09817F244C605 /* Pods_Health_management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9D5937E91368405AE0B911 /* Pods-Health-management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health-management.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health-management/Pods-Health-management.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +96,9 @@
 				E96997DF1EFD30D300B52549 /* inVC.swift */,
 				E9853F7B1EDC5B6F00C7F1FB /* Info.plist */,
 				81E762381EEAC9FB000FEDFF /* Tool.swift */,
-				47C69A8D1F067B9500D892FB /* caloireVC.swift */,
+				47C735491F12BF070029B1F5 /* TabBarVC.swift */,
+				470EE3841F18DB080074F280 /* CaloireVC.swift */,
+				470EE3881F18DF330074F280 /* TextVC.swift */,
 			);
 			path = "Health-management";
 			sourceTree = "<group>";
@@ -231,12 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9853F721EDC5B6F00C7F1FB /* ViewController.swift in Sources */,
-				47C69A8E1F067B9500D892FB /* caloireVC.swift in Sources */,
 				E96997E01EFD30D300B52549 /* inVC.swift in Sources */,
+				470EE3851F18DB080074F280 /* CaloireVC.swift in Sources */,
 				E994A7541EDEE724003D11F1 /* ManVC.swift in Sources */,
 				E9853F701EDC5B6F00C7F1FB /* AppDelegate.swift in Sources */,
 				E96997DE1EFD2F9C00B52549 /* SportscheduleVC.swift in Sources */,
+				47C7354A1F12BF070029B1F5 /* TabBarVC.swift in Sources */,
 				81E762391EEAC9FB000FEDFF /* Tool.swift in Sources */,
+				470EE3891F18DF330074F280 /* TextVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
