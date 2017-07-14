@@ -10,8 +10,8 @@ import UIKit
 
 class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
     
-//    var index:Int=0
     var preIndex:Int=1
+    var preAry:Array<String>=[]
     var datas:Array<String>=[]
     var data:String=""
     @IBOutlet weak var numView: UITableView!
@@ -21,17 +21,14 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
      //nameData write to file
         let fm = FileManager.default
         let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-//        let folderName =
-        let fileName = String(self.preIndex)+"_.txt"
+        let fileName = "1_.txt"
         
-        let myurl = docsurl.appendingPathComponent(fileName)
+        let folderName = preAry[self.preIndex]
+        let folderurl = docsurl.appendingPathComponent(folderName)
+        
+        let myurl = folderurl.appendingPathComponent(fileName)
         print("myurl = \(myurl)")
     
-//        var myurl = docsurl.appendingPathComponent(folderName)
-//        print("myurl = \(myurl)")
-//         myurl.appendPathComponent(fileName)
-//        print("myUrl = \(myUrl)")
-        
         var names=numText.text
         if names==""{
           enterAction()
@@ -54,14 +51,6 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
         numText.text!=self.data
         
     }
-    
-//    func documentsPath()->String{
-//    
-//        var pathString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//        var documenntDir = pathString[0] as String
-//        
-//        return documenntDir
-//    }
     
     @IBOutlet weak var numText: UITextField!
     @IBAction func backBtn(_ sender: UIButton) {
@@ -140,17 +129,19 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
 
     override func viewWillAppear(_ animated: Bool) {
     // read file to nameData
-    // tableview reload data
-//        print(self.preIndex)
+    // tableview reload dat
         loadData()
     }
     
     func loadData(){
         let fm = FileManager.default
         let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let fileName = String(self.preIndex)+"_.txt"
+        let fileName = "1_.txt"
         
-        let myurl = docsurl.appendingPathComponent(fileName)
+        let folderName = preAry[self.preIndex]
+        let folderurl = docsurl.appendingPathComponent(folderName)
+        
+        let myurl = folderurl.appendingPathComponent(fileName)
         print("myurl = \(myurl)")
 
         do {
@@ -158,7 +149,6 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
             datas = Names.components(separatedBy: ",")
             print("OK2")
         }catch{
-//            datas=[]
             print(" error2 ")
         }
 

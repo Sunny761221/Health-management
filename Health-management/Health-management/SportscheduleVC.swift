@@ -136,6 +136,8 @@ class SportscheduleVC: UIViewController,UITableViewDataSource,UITableViewDelegat
         print(indexPath.row)
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "inVC1") as! inVC
+        vc.preIndex = indexPath.row
+        vc.preAry = datas
         
         self.navigationController?.pushViewController(vc, animated: true)
 
