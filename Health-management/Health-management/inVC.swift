@@ -18,15 +18,18 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
     
     @IBAction func storeBtn(_ sender: UIButton) {
 
-        // nameData write to file
+     //nameData write to file
         let fm = FileManager.default
         let docsurl = try! fm.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let folderName = ""
+//        let folderName =
         let fileName = String(self.preIndex)+"_.txt"
         
-        var myurl = docsurl.appendingPathComponent(folderName)
+        let myurl = docsurl.appendingPathComponent(fileName)
         print("myurl = \(myurl)")
-         myurl.appendPathComponent(fileName)
+    
+//        var myurl = docsurl.appendingPathComponent(folderName)
+//        print("myurl = \(myurl)")
+//         myurl.appendPathComponent(fileName)
 //        print("myUrl = \(myUrl)")
         
         var names=numText.text
@@ -38,20 +41,27 @@ class inVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFie
               names = names! + "," + name
           }
         }
-    
-    do {
 
+        do {
             try names?.write(to: myurl, atomically: false, encoding: .utf8)
             print("OK1")
-       }catch{
+        }catch{
             print(" error1 ")
         }
-        
+
         self.datas.append(numText.text!)
         self.numView.reloadData()
         numText.text!=self.data
         
     }
+    
+//    func documentsPath()->String{
+//    
+//        var pathString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+//        var documenntDir = pathString[0] as String
+//        
+//        return documenntDir
+//    }
     
     @IBOutlet weak var numText: UITextField!
     @IBAction func backBtn(_ sender: UIButton) {
